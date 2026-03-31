@@ -39,7 +39,7 @@ pipeline {
                 echo 'Sending email notification...'
                 mail to: "${EMAIL}",
                      subject: "Deployment Successful",
-                     body: "The Docker container for ${IMAGE_NAME} has been successfully deployed and is running on this URL: http://13.204.88.103:${PORT}/"
+                     body: "The Docker container for ${IMAGE_NAME} has been successfully deployed and is running now on this URL: http://13.204.88.103:${PORT}/"
             }
         }
     }
