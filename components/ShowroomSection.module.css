@@ -1,0 +1,110 @@
+.showroom {
+  background: #111;
+  padding: 80px 60px 100px;
+  color: white;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  gap: 40px;
+  align-items: center;
+  min-height: 480px;
+}
+
+.textLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: clamp(22px, 2.8vw, 38px);
+  font-weight: 300;
+  color: white;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.imageCenter {
+  height: 460px;
+  position: relative;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.infoRight {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.addressLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.address {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.shopBtn {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  border-color: rgba(255,255,255,0.35);
+}
+
+.playBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.playBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+  .showroom {
+    padding: 60px 24px 80px;
+  }
+  .inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .imageCenter {
+    height: 300px;
+  }
+  .infoRight {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

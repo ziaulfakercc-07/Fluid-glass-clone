@@ -1,0 +1,239 @@
+.navbar {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--nav-bg);
+  backdrop-filter: var(--nav-backdrop);
+  -webkit-backdrop-filter: var(--nav-backdrop);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  padding: 10px 16px;
+  min-width: 220px;
+  justify-content: space-between;
+}
+
+.navbarScrolled .navInner {
+  background: rgba(10, 10, 10, 0.92);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.navHome {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.navHome:hover {
+  opacity: 0.7;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.menuBtn:hover {
+  opacity: 0.7;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: white;
+  transition: all 0.3s;
+}
+
+/* ---- MENU OVERLAY ---- */
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.menuPanel {
+  background: #141414;
+  border-radius: 16px;
+  padding: 48px;
+  min-width: 380px;
+  max-width: 440px;
+  width: 90vw;
+  animation: menuOpen 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.menuLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menuLink {
+  font-size: 36px;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  line-height: 1.25;
+  transition: opacity 0.2s;
+  letter-spacing: -0.02em;
+}
+
+.menuLink:hover {
+  opacity: 0.5;
+}
+
+.menuFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menuSecondaryLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menuSecondaryLink {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.menuSecondaryLink:hover {
+  color: white;
+}
+
+.menuContact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.menuContactLink {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menuContactLink:hover {
+  color: white;
+}
+
+.menuCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.menuCta:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menuCta::before {
+  content: '→';
+}
+
+.closeBtn {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(30, 30, 30, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background: rgba(50, 50, 50, 0.9);
+}
+
+@media (max-width: 480px) {
+  .menuPanel {
+    padding: 32px 24px;
+    min-width: unset;
+  }
+  .menuLink {
+    font-size: 28px;
+  }
+}

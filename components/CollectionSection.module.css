@@ -1,0 +1,108 @@
+.collection {
+  background: var(--cream);
+  padding: 0 60px 120px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  margin-bottom: 60px;
+}
+
+.headerLeft {}
+.headerRight {}
+
+/* Masonry-style grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 24px;
+  min-height: 700px;
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.cardLabel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  z-index: 2;
+  letter-spacing: -0.01em;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+  transition: opacity 0.3s;
+}
+
+.card:hover::after {
+  opacity: 0.7;
+}
+
+/* Positioning */
+.cardTopCenter {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 320px;
+}
+
+.cardMiddleRight {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  height: 480px;
+}
+
+.cardMiddleCenter {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  height: 320px;
+}
+
+.cardBottomLeft {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  height: 320px;
+}
+
+@media (max-width: 900px) {
+  .collection {
+    padding: 0 24px 80px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: auto;
+  }
+  .cardTopCenter,
+  .cardMiddleCenter,
+  .cardBottomLeft,
+  .cardMiddleRight {
+    grid-column: auto;
+    grid-row: auto;
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    height: 240px !important;
+  }
+}
