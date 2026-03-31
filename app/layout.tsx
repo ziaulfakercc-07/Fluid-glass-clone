@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: "architectural glazing, glass doors, structural glass, glass windows, fluid glass",
   openGraph: {
     title: "Fluid Glass — Structural & Architectural Glazing",
-    description: "We bring architecture to life through craft and innovation.",
+    description: "We bring architecture to life through craft and innovation. Happily serving architects, builders, and homeowners with premium glass solutions for over 20 years.",
     type: "website",
   },
 };
