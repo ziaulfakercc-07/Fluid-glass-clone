@@ -7,7 +7,7 @@ export default function AboutSection() {
       <div className={styles.aboutInner}>
         <span className={`section-label reveal ${styles.label}`}>ABOUT FLUID GLASS</span>
         <h2 className={`${styles.heading} reveal reveal-delay-1`}>
-          We bring architecture to life through craft and innovation.And now we are forward-thinking, embracing the future of glass architecture.
+          We bring architecture to life through craft and innovation in glass.
         </h2>
         <div className={`${styles.actions} reveal reveal-delay-2`}>
           <a href="#collection" className="btn btn-dark btn-arrow">
