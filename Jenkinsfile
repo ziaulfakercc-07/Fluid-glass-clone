@@ -41,7 +41,7 @@ pipeline {
             echo "✅ Deployment successful! App running at http://3.110.37.157:${PORT}/"
             mail to: "${EMAIL}",
                  subject: "✅ Deployment Successful - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Good news!\n\nThe deployment was successful.\n\nApp URL: http://3.110.37.157:${PORT}/\nBuild URL: ${env.BUILD_URL}"
+                 body: "Good news!\n\nThe deployment was successful now.\n\nApp URL: http://3.110.37.157:${PORT}/\nBuild URL: ${env.BUILD_URL}"
         }
         failure {
             echo "❌ Deployment failed. Check the logs above."
