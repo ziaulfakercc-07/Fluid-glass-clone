@@ -5,6 +5,7 @@ pipeline {
         CONTAINER_NAME = 'Glass-app'
         IMAGE_NAME = 'glass-app-image'
         PORT = "3000"
+        EMAIL = "ziaulfakercc@gmail.com"
     }
 
     stages {
@@ -38,9 +39,15 @@ pipeline {
     post {
         success {
             echo "✅ Deployment successful! App running at http://3.110.37.157:${PORT}/"
+            mail to: "${EMAIL}",
+                 subject: "✅ Deployment Successful - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "Good news!\n\nThe deployment was successful.\n\nApp URL: http://3.110.37.157:${PORT}/\nBuild URL: ${env.BUILD_URL}"
         }
         failure {
             echo "❌ Deployment failed. Check the logs above."
+            mail to: "${EMAIL}",
+                 subject: "❌ Deployment Failed - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "The deployment failed.\n\nPlease check the logs at: ${env.BUILD_URL}"
         }
     }
 }
