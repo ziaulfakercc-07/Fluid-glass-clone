@@ -47,7 +47,7 @@ pipeline {
             echo "❌ Deployment failed. Check the logs above."
             mail to: "${EMAIL}",
                  subject: "❌ Deployment Failed - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "The deployment failed.\n\nPlease check the logs at: ${env.BUILD_URL}"
+                 body: "The Deployment failed.\n\nPlease check the logs at: ${env.BUILD_URL}"
         }
     }
 }
