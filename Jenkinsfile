@@ -37,7 +37,7 @@ pipeline {
 
     post {
         success {
-            echo "✅ Deployment successful! App running at http://13.204.88.103:${PORT}/"
+            echo "✅ Deployment successful! App running at http://3.110.37.157:${PORT}/"
         }
         failure {
             echo "❌ Deployment failed. Check the logs above."
